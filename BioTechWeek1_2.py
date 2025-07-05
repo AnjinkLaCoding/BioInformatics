@@ -16,3 +16,5 @@ text = 'TCAGAGACTAACATCAACATCAGAGACTGTAGACTTGATCAGAGACTGTGTAAAGCCTGAAGAAATGTGTAA
 ResFreq = []
 ResFreq = GetFreqWord(text,11)
 print(ResFreq)
+
+# in above case we got ['TGTGTAAAGCC', 'GTGTAAAGCCT'] as the most frequent k-mer word
