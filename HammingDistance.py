@@ -1,0 +1,8 @@
+a = 'CTACAGCAATACGATCATATGCGGATCCGCAGTGGCCGGTAGACACACGT'
+b = 'CTACCCCGCTGCTCAATGACCGGGACTAAAGAGGCGAAGATTATGGTGTG'
+
+Coun = 0
+for i in range(len(a)):
+    if b[i]!=a[i]:
+        Coun+=1
+print(Coun)
