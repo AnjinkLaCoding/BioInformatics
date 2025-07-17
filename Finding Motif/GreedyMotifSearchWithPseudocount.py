@@ -34,6 +34,7 @@ def score(motifs):
     return res
 
 
+#We will +1 on each count(nucleotide) before dividing it with sum(nucleotide in that column)
 def ProfileMaking(motifs, k):
     p = {nucleo:[0]*k for nucleo in 'ACGT'}
     t = len(motifs)
