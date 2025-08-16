@@ -12,7 +12,7 @@ def ManhattanTourist(n, m, Down, Right):
             S[i][j] = max(S[i-1][j] + Down[i-1][j], S[i][j-1] + Right[i][j-1])
     return S[n][m]
 
-with open('C:/Users/Matthew/Downloads/dataset_30205_10 (1).txt', 'r') as file:
+with open('C:/Users/Matthew/Downloads/dataset_ManhattanTouristDP.txt', 'r') as file:
     line = [lines.strip() for lines in file if lines.strip()]
 n, m = map(int, line[0].split())
 print(n,m)
@@ -22,4 +22,5 @@ Right = np.array([list(map(int, lines.split())) for lines in line[SepIndex + 1:]
 print(Down)
 print(Right)
 res = ManhattanTourist(n, m, Down, Right)
+
 print(int(res))
