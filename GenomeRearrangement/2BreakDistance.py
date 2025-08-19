@@ -21,7 +21,6 @@ def two_break_distance(P, Q):
     P_edges = colored_edges(P)
     Q_edges = colored_edges(Q)
 
-    # Build adjacency list
     adj = {}
     for u,v in P_edges + Q_edges:
         adj.setdefault(u, []).append(v)
@@ -46,10 +45,6 @@ def two_break_distance(P, Q):
     return blocks - cycles
 
 def parse_genome_line(line):
-    """
-    Parse a single genome line and return list of chromosomes.
-    Each chromosome is a list of genes.
-    """
     chromosomes = []
     
     # Find all sequences within parentheses
@@ -88,4 +83,5 @@ lines = [line.strip() for line in lines if line.strip()]
 P = parse_genome_line(lines[0])
 Q = parse_genome_line(lines[1])
 res = two_break_distance(P, Q)
+
 print(res)
