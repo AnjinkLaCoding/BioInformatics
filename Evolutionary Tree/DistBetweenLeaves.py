@@ -18,7 +18,7 @@ def DistanceBetweenLeaves(n, Graph):
                     DistMatrix[i][j] = min(DistMatrix[i][j], DistMatrix[i][k] + DistMatrix[k][j])
     return DistMatrix
 
-with open('C:/Users/Matthew/Downloads/dataset_30284_12 (1).txt', 'r') as file:
+with open('C:/Users/Matthew/Downloads/dataset_DistBetweenLeaves.txt', 'r') as file:
     lines = [line.strip() for line in file if line.strip()]
 n = int(lines[0])
 res = defaultdict(list)
@@ -32,4 +32,5 @@ for line in lines[1:]:
 Graph = dict(res)
 res = DistanceBetweenLeaves(n, Graph)
 for i in range(n):
+
     print(" ".join(map(str, res[i][:n])))
