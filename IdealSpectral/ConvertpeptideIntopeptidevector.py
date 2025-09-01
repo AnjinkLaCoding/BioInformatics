@@ -17,6 +17,7 @@ def IdealSpectrum(Peptide):
             return sorted(res)
         prefix = Peptide[0:i+1]
         res.append(CountPeptide(prefix))
+    return res
 
 def PeptideVector(Masses):
     n = max(Masses)
@@ -38,4 +39,5 @@ Vector = PeptideVector(res)
 print(" ".join(Vector))
 with open('C:/Users/Matthew/Downloads/Sol.txt', 'w') as f:
     for line in Vector:
+
         f.write(f"{line} ")
