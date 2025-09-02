@@ -3,11 +3,8 @@ mass_table = [57, 71, 87, 97, 99, 101, 103, 113, 113, 114, 115, 128, 128, 129, 1
 def SizeDict(Spectrum, threshold, maxScore):
     # Size[t][i] = number of peptides with mass i and score t
     Size = [[0] * (len(Spectrum) + 1) for _ in range(maxScore + 1)]
-    
-    # Base case: empty peptide has mass 0 and score 0
     Size[0][0] = 1
-    
-    # Fill the DP table
+
     for i in range(1, len(Spectrum) + 1):
         for t in range(maxScore + 1):
             for mass in mass_table:
@@ -30,4 +27,5 @@ Spectrum = list(map(int, lines[0].split()))
 threshold = int(lines[-2])
 MaxScore = int(lines[-1])
 result = SizeDict(Spectrum, threshold, MaxScore)
+
 print(result)
