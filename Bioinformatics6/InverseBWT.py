@@ -7,6 +7,7 @@ def index_seq(seq):
         #Returns the character and its current occurrence count (0-indexed)
         #Second time seeing 'A': yields ('A', 1), then increments count to 2
         d[c] += 1
+    return d
 
 def InverseBWT(seq):
     first = list(index_seq(sorted(seq)))
@@ -29,4 +30,5 @@ Sample Output:
 TACATCACGT$
 '''
 res = InverseBWT(Text)
+
 print(res)
